@@ -1,16 +1,29 @@
-/*  your css code here. If applicable */
-.grid-container{
-	display:grid;
-    grid-template-columns:repeat(9,200px);
-	grid-template-rows: repeat(1,150px);
-	grid-gap: 10px;
-    flex-wrap: wrap;
-}
-.grid-item{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color : lightgray;
-	border-radius : 5px;
-	font-size : 40px;
-}
+ .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .grid-item {
+            background-color: lightgray;
+            height: 150px;
+            width: 200px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .grid-item {
+                width: calc(100% - 20px);
+            }
+        }
