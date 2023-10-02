@@ -1,6 +1,6 @@
 /*  your css code here. If applicable */
 .grid-container{
-	display:flex;
+	display:grid;
 	grid-gap: 10px 10px;
 	flex-wrap:wrap;
 }
